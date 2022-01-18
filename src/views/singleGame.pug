@@ -1,0 +1,23 @@
+extends index.pug
+
+block code
+ -const game = {"name": "Rise City", "redirects": {"site": ["https://risecity.io/", "<i class='fas fa-house-user fa-2x'></i>"], "twitter": ["https://twitter.com/RiseCityNFT", "<i class='fab fa-twitter fa-2x'></i>"], "telegram": ["https://t.me/risecity", "<i class='fab fa-telegram fa-2x'></i>"], "discord": ["https://discord.com/invite/TCEpE7Ktxv", "<i, class='fab fa-discord fa-2x'></i>"], }, "rede": " BSC", }
+
+block head
+ link(rel="stylesheet", href="../public/css/singleGame.css")
+ title= game.name
+ link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css", integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==", crossorigin="anonymous", referrerpolicy="no-referrer")
+
+block content
+ div.game-info
+  h1.title= game.name
+  div.redirects
+   ul.redirects
+    each item in game.redirects
+     li
+      a(href=`${item[0]}`, target="_blank")
+       | !{item[1]}
+       
+
+block js
+ script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/js/all.min.js", integrity="sha512-yk7SvYYZqGS11tWcb6cyoKiwgrNBeCHC7RebrVa0QOySVjh6WjEjaBaBue+VvDBHEfAGa0Z8/b6+LhoGSeweaw==", crossorigin="anonymous", referrerpolicy="no-referrer")

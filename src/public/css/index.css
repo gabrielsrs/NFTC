@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,400;1,545&display=swap');
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    box-shadow:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    font-size: 100%;
+    list-style-type: none;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.main-content {
+ flex-direction: row;
+ display: flex;
+ width: 100vw;
+ height: 100vh;
+ align-items: center;
+ justify-content: center;
+ background-color: rgb(157, 92, 211);
+ background-image: url(https://cryptocannabisclub.com/wp-content/uploads/2021/07/black-overlay.png);
+}
+
+.vertical-nav {
+ display: flex;
+ width: 5vw;
+ height: 90vh;
+ position: absolute;
+ left: 3vw;
+ background-color: rgb(255, 187, 0);
+}
+
+.time-zone {
+ display: flex;
+ width: 4vw;
+ height: 25vh;
+ position: absolute;
+ right: 3vw;
+ background-color: rgb(153, 14, 14);
+}
+
+.logo {
+ display: flex;
+ width: 70px;
+ height: 70px;
+ position: absolute;
+ top: 5vh;
+ right: 4vw;
+ background-color: rgb(19, 70, 209, 0.4);
+}
