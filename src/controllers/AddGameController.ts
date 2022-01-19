@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { AddGameService } from "../services/AddGameService";
+import { AddGameService } from "../services/addGameService";
 
 class AddGameController {
  async handle (request: Request, response: Response) {
@@ -14,7 +14,7 @@ class AddGameController {
 
   const addGameService = new AddGameService();
 
-  const game = await addGameService.execute({
+  const gameInformation = await addGameService.execute({
    name,
    site,
    twitter,
@@ -23,7 +23,7 @@ class AddGameController {
    rede,
   });
   
-  return response.json(game);
+  return response.json(gameInformation);
  }
 }
 

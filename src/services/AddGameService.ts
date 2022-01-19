@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { GameRepositories } from "../repositories/GameRepositories";
+import { GameRepositories } from "../repositories/gameRepositories";
 
 interface IGameRequest {
  name: string;
