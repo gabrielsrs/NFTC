@@ -1,7 +1,7 @@
 extends index.pug
 
 block head
-  link(rel="stylesheet", href="../public/css/home.css")
+  link(rel="stylesheet", href="/css/home.css")
   title NFTC
 
 block content 
@@ -12,6 +12,7 @@ block content
       span P2E
       span Colection
      div.search-field
-      input.type-field
-      button.send-field
+      form(method="get", action= "/home")
+        input.type-field
+      button(class= "send-field", type= "submit", name= "game")
     div.banner

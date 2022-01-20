@@ -10,10 +10,14 @@ class SearchGameController {
   const searchService = new SearchService();
 
   const gameQuery = await searchService.execute({
-   name: game //Inside my head this work, but if not change everything to name 
+   name: game
   });
 
-  return response.json(gameQuery);
+  if(gameQuery){
+   return response.render("singleGame", {gameQuery});
+  }
+
+  return response.render("home")  
  }
 }
 

@@ -16,10 +16,33 @@ class SearchService{
   });
 
   if(!searchGame) {
-   throw Error("Game not Found");
+   return ""
+   // throw Error("Game not Found");
+  }
+
+  // Do this dynamic (static by now)
+  const loadIcon = require("../public/static/iIcon.json")
+
+  const gameInfoBuild = {
+   "name": searchGame.name,
+   "redirects": {
+    "site": [
+     searchGame.site, loadIcon.site
+    ],
+    "twitter": [
+     searchGame.twitter, loadIcon.twitter
+    ],
+    "telegram": [
+     searchGame.telegram, loadIcon.telegram
+    ],
+    "discord": [
+     searchGame.discord, loadIcon.discord
+    ],
+   },
+   "rede": searchGame.rede
   }
   
-  return searchGame
+  return gameInfoBuild;
  }
 }
 

@@ -8,6 +8,10 @@ const addGameController = new AddGameController();
 const searchGameController = new SearchGameController();
 
 router.post("/game/create", addGameController.handle)
-router.post("/home", searchGameController.handle)
+
+router.get("/home", searchGameController.handle)
+
+
+router.get("/singleGame")
 
 export { router }
