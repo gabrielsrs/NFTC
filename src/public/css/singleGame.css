@@ -14,6 +14,7 @@
  color: #fff;
 }
 
+/* The width get a % from  previous element (div .title)*/
 .title::after {
  content: "";
  width: 700%;

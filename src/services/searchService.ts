@@ -6,18 +6,19 @@ interface ISearchGame {
 }
 
 class SearchService{
- async execute ({
+ async execute({
   name
- }: ISearchGame) {
+ }: ISearchGame ) {
   const gameRepository = getCustomRepository(GameRepositories);
-
+  
+  // This research's case sensitive
   const searchGame = await gameRepository.findOne({
-   name,
+   name
   });
 
+  // Handle error in home page
   if(!searchGame) {
-   return ""
-   // throw Error("Game not Found");
+   throw Error("Game not Found");
   }
 
   // Do this dynamic (static by now)

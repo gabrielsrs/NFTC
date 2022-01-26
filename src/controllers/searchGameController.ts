@@ -2,22 +2,16 @@ import { Request, Response } from "express";
 import { SearchService } from "../services/searchService";
 
 class SearchGameController {
- async handle(request: Request, response: Response) {
-  const {
-   game
-  } = request.body
-
+ async  handle(request: Request, response: Response) {
+  const gameName = request.query.game as string;
+  
   const searchService = new SearchService();
 
-  const gameQuery = await searchService.execute({
-   name: game
+  const gameInformation = await searchService.execute({
+   name: gameName
   });
 
-  if(gameQuery){
-   return response.render("singleGame", {gameQuery});
-  }
-
-  return response.render("home")  
+  return response.render("singleGame", { gameInformation })
  }
 }
 
