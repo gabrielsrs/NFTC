@@ -3,13 +3,11 @@ import { GamesService } from "../services/gamesService";
 
 class GamesController {
  async handle(request: Request, response:Response) {
-
   const gamesService = new GamesService();
   
-  const libraryGames = gamesService.execute();
+  const libraryGames = await gamesService.execute();
 
-  // return response.render("games", { libraryGames })
-  return response.json(libraryGames);
+  return response.render("games", {libraryGames})
  }
 }
 

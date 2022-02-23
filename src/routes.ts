@@ -14,6 +14,6 @@ const gamesController = new GamesController();
 router.get("/", homeController.handle);
 router.post("/create", addGameController.handle);
 router.get("/search", searchGameController.handle);
-router.get("games", gamesController.handle);
+router.get("/games", gamesController.handle);
 
 export { router }

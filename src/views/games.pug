@@ -1,12 +1,111 @@
 extends index.pug
 
 block head
- link(rel="stylesheet", href="../public/css/game.css")
+ link(rel="stylesheet", href="/css/games.css")
  title Games
 
 block content
- div.card
-  div.img-game
-  div.info-content
-   div.socials
-   div.title
+ div.full
+  div.content
+    div.cards
+      each element in libraryGames
+        div.element
+            div.img-game
+              div.img
+                a(href=`http://127.0.0.1:5000/search?game=${element.name}`, target="_self")
+                  img(src="https://cdn.dribbble.com/users/10882/screenshots/15172621/media/cd2246d5d0f54f9a4316bd4d276764b2.png?compress=1&resize=400x300", alt="card game BR")
+            div.info-content
+              ul.socials
+                li
+                  a(href=`${element.twitter}`, target="_blank")
+                    | <i class='fab fa-twitter fa-2x'></i>
+                li
+                  a(href=`${element.discord}`, target="_blank")
+                    | <i class='fab fa-discord fa-2x'></i>
+              div.title-games-card= element.name
+      //- div.element
+      //-   div.img-game
+      //-     div.img
+      //-       img(src="https://cdn.dribbble.com/users/10882/screenshots/15172621/media/cd2246d5d0f54f9a4316bd4d276764b2.png?compress=1&resize=400x300", alt="card game BR")
+      //-   div.info-content
+      //-     ul.socials
+      //-       li
+      //-       li
+      //-     div.title-games-card 
+      //- div.element
+      //-   div.img-game
+      //-     div.img
+      //-       img(src="https://cdn.dribbble.com/users/10882/screenshots/15172621/media/cd2246d5d0f54f9a4316bd4d276764b2.png?compress=1&resize=400x300", alt="card game BR")
+      //-   div.info-content
+      //-     ul.socials
+      //-       li
+      //-       li
+      //-     div.title-games-card Card games BR - The better card game in the world
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //- div.element
+      //-   div.img-game
+      //-     img
+      //-   div.info-content
+      //-     div.socials
+      //-     div.title-games-card
+      //-  div.element
+      //-   div.img-game
+      //-    img(src="https://cdn.dribbble.com/users/10882/screenshots/15172621/media/cd2246d5d0f54f9a4316bd4d276764b2.png?compress=1&resize=400x300", alt="RSC")
+      //-   div.info-content
+      //-    div.socials
+      //-     ul 
+      //-       li
+      //-         a
+      //-           | <i class='fab fa-twitter'>
+      //-       li
+      //-         a
+      //-           <i class='fab fa-discord'>
+      //-    div.title-games-card
+      //-     span GRAND TITLE TEXT
